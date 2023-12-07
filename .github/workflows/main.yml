@@ -25,7 +25,7 @@ jobs:
         with:
           bundler-cache: true
       - uses: browser-actions/setup-firefox@v1
-      - run: bundle exec cucumber -p github-actions
+      - run: bundle exec cucumber -p gh-headless-firefox
 
       - name: Test Reporter
         uses: dorny/test-reporter@v1.7.0
