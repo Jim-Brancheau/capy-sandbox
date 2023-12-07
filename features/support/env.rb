@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'capybara/cucumber'
 
 Capybara.run_server = false
