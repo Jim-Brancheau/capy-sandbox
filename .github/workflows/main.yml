@@ -31,5 +31,5 @@ jobs:
         if: success() || failure()
         with:
           name: Capybara Tests
-          path: reports/jest-*.xml
-          reporter: jest-junit
+          path: reports/junit-*.xml/TEST*.xml
+          reporter: java-junit
