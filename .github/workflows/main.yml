@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
       - run: bundle install
-      - run: cucumber -P github-actions
+      - run: cucumber -p github-actions
 
       - name: Test Reporter
         uses: dorny/test-reporter@v1.7.0
