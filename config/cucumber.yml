@@ -1,3 +1,3 @@
 <% gh_run_id = ENV['RUN_ID'] %>
 default: --format html
-gh-headless-firefox: DRIVER=headless_firefox --format pretty --format junit --out=reports/junit-<%= gh_run_id %>.xml
+gh-headless-firefox: DRIVER=headless_firefox --format pretty --format junit --out=reports/junit-<%= gh_run_id %>.xml --publish-quiet
