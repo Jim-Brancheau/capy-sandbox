@@ -19,7 +19,7 @@ jobs:
   capybara:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@4
+      - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
       - run: bundle install
       - run: cucumber -P github-actions
