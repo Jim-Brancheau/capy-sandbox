@@ -15,7 +15,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - run: rubocop --format github
+      - run: bundle exec rubocop --format github
 
   capybara:
     runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - run: cucumber -p github-actions
+      - run: bundle exec cucumber -p github-actions
 
       - name: Test Reporter
         uses: dorny/test-reporter@v1.7.0
