@@ -1,0 +1,2 @@
+<% gh-run-id = ENV["RUN_ID"] %>
+github-actions: --format pretty --format junit --out reports/jest-<%= gh-run-id %>.xml
