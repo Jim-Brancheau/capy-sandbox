@@ -26,6 +26,8 @@ jobs:
           bundler-cache: true
       - uses: browser-actions/setup-firefox@v1
       - run: bundle exec cucumber -p gh-headless-firefox
+        env:
+          SAUCE_DEMO_PASSWORD: ${{ secrets.SAUCE_DEMO_PASSWORD }}
 
       - name: Test Reporter
         uses: dorny/test-reporter@v1.7.0

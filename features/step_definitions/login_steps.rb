@@ -10,7 +10,7 @@ end
 When('I enter credentials for {word}') do |user_name|
   login_page = LoginPage.new
   login_page.enter_username(user_name)
-  login_page.enter_password('secret_sauce')
+  login_page.enter_password(ENV['SAUCE_DEMO_PASSWORD'])
 end
 
 When('I click Login') do
