@@ -13,6 +13,16 @@ When('I enter credentials for {word}') do |user_name|
   login_page.enter_password(ENV['SAUCE_DEMO_PASSWORD'])
 end
 
+When('I enter username {word}') do |user_name|
+  login_page = LoginPage.new
+  login_page.enter_username(user_name)
+end
+
+When('I enter incorrect password {word}') do |password|
+  login_page = LoginPage.new
+  login_page.enter_password(password)
+end
+
 When('I click Login') do
   login_page = LoginPage.new
   login_page.click_login
